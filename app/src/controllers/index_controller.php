@@ -4,8 +4,8 @@ class index_controller extends Controller
 {
     function index_action()
     {
-        // $todo_model = new todo_model();
-
+        $todo_model = new todo_model();
+        print_r($todo_model->db->execute(`SELECT * FROM qwe;`));
 
         $this->view->generate('index_view.php', 'layout.php');
     }
